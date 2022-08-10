@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>My Library</h1>
+    <section id="books"></section>
+    <div class="modal">
+      <form id="book-form">
+        <div id="form-title">
+          <h3>Add New Book</h3>
+          <span class="close">&times;</span>
+        </div>
+        <input id="title-input" type="text" placeholder="Title" required />
+        <input id="author-input" type="text" placeholder="Author" required />
+        <input id="pages-input" type="number" placeholder="Pages" required />
+        <label for="read-input"
+          >Read? <input type="checkbox" name="read-check" id="read-input"
+        /></label>
+        <input id="submit-book" type="submit" value="SUBMIT" />
+      </form>
+    </div>
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
