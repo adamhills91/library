@@ -4,11 +4,20 @@ const myLibrary = [];
 // Book display container
 const display = document.getElementById("books");
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
+
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 
 // Function to create HTML elements with content and classes
@@ -65,7 +74,6 @@ function createBook(book, index) {
   bookItem.appendChild(createReadElement(bookItem, book));
 
   bookItem.querySelector(".delete-btn").addEventListener("click", () => {
-    console.log(index);
     deleteBook(index);
   });
 
